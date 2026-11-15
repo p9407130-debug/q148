@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+struct Student {
+    int roll_no;
+    char name[50];
+    float marks;
+};
+void printStudent(struct Student s) {
+    printf("--- Student Details ---\n");
+    printf("Roll Number : %d\n", s.roll_no);
+    printf("Name        : %s\n", s.name);
+    printf("Marks       : %.2f\n", s.marks);
+}
+int main() {
+    struct Student s1;
+    s1.roll_no = 101;
+    strcpy(s1.name, "Aarav Sharma");
+    s1.marks = 92.50;
+    printStudent(s1);
+    return 0;
+}
